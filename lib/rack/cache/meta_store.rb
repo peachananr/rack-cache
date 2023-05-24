@@ -192,10 +192,7 @@ module Rack::Cache
     # Generate a SHA1 hex digest for the specified string. This is a
     # simple utility method for meta store implementations.
     def hexdigest(data)
-       Rails.logger.info "Key:#{data}"
-        Rails.logger.info "Digest:#{Digest::SHA1.hexdigest(data)}"
       Digest::SHA1.hexdigest(data)
-     
     end
 
   public
